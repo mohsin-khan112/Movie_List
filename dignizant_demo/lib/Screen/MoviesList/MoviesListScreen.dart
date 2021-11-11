@@ -59,20 +59,22 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  AspectRatio(
-                                    aspectRatio: 0.8,
-                                    child: Image.network(
-                                      '${state.movieList![index].thumbnail ?? AspectRatio(
-                                            aspectRatio: 0.8,
-                                            child: Container(
-                                              color: Color(0xff27282C),
-                                            ),
-                                          )}',
-                                      fit: BoxFit.fill,
+                                  Expanded(
+                                    child: AspectRatio(
+                                      aspectRatio: 0.8,
+                                      child: Image.network(
+                                        '${state.movieList![index].thumbnail ?? AspectRatio(
+                                              aspectRatio: 0.8,
+                                              child: Container(
+                                                color: Color(0xff27282C),
+                                              ),
+                                            )}',
+                                        fit: BoxFit.fill,
+                                      ),
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 5.0,
+                                    height: 10.0,
                                   ),
                                   Center(
                                     child: Text(
@@ -85,7 +87,7 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 2.0,
+                                    height: 5.0,
                                   ),
                                   Center(
                                     child: Text(
